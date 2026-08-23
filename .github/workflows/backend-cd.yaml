@@ -29,11 +29,13 @@ jobs:
       - name: Install pipenv
         run: pip install pipenv
 
-      - name: Install dependencies and lint
+      - name: Install dependencies
         run: |
-          cd ${{env.SRC_DIR}}
+          cd ${{ env.SRC_DIR }}
           pipenv install --dev
-          pipenv run lint
+      - name: Run tests
+        run: cd ${{ env.SRC_DIR }} && pipenv run test
+        
   test:
     runs-on: ubuntu-latest
     steps:
