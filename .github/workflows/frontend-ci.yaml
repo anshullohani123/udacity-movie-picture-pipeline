@@ -1,4 +1,4 @@
-name: Frontend Integration (CI)
+name: Frontend Continuous Integration
 
 on:
   workflow_dispatch:
