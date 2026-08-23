@@ -47,8 +47,8 @@ jobs:
       - name: Install dependencies
         run: cd ${{env.SRC_DIR}} && npm ci
 
-      - name: Build
-        run: cd ${{env.SRC_DIR}} && npm test
+      - name: Run tests
+        run: cd ${{ env.SRC_DIR }} && npm test
 
   build:
     needs: [lint, test]
