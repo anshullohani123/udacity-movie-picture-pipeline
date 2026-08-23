@@ -50,7 +50,7 @@ jobs:
       - name: Install dependencies
         run: cd ${{env.SRC_DIR}} && pipenv install --dev
 
-      - name: Run linter
+      - name: Run tests
         run: cd ${{env.SRC_DIR}} && pipenv run test
 
   build:
